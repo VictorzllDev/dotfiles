@@ -1,3 +1,49 @@
+## functional multimonitor support
+##### January 22 2025
+
+- New
+  - Multimonitor support and automatic bspwm workspaces configuration.
+
+https://github.com/user-attachments/assets/53893784-1eb3-4ebb-b96b-3fbbd1c4fc93
+
+Basically you don't have to do anything. The main monitor is configured, if there are more monitors connected, they will be aligned to the right of the main one and so on.
+
+It also auto-configures the workspaces in bspwm.
+If you have a single monitor you will have the same 6 workspaces as you have always had. If you have 2 monitors you will have 8 workspaces distributed across the 2 monitors, 4 and 4.
+If you have 3 monitors, you will have 9 workspaces divided into 3 per monitor. and so on.
+
+I only tested with 2 monitors, but may work with 3 and more all the setup.
+
+- Fixes
+  - Fixed Hidebar in Andrea and z0mbi3, the latest commit to fix multimonitor in those themes, breaks the HideBar feature.
+  - The Theme selector and wallpaper selector, now display correctly in size, depending on the monitor it is opened on.
+  - Its not a fix, just edited sxhkd to work properly with multimonitor.
+
+- Edited
+  - Aline, Cristina, Cyntbhia, Daniela, Jan, Karla, Varinka, Yael rices edited. I added the 3 missing workspaces.
+
+- Removed
+  - In ExternalRules file, i removed the feature to open floating terminals based in percentage.
+
+And thats it, i need to edit the ScreenShot script, to adapt it to new multimonitor, to take only active monitor or all monitors. But at some point in 2025 I will do it.
+
+Now yes, the dotfiles are coming to the end, there will always be things to add/improve but I think it's enough.
+I just have another functionality to add floating around in my head.
+**Save your bspwm sessions, and when you need it, open a saved session with all your apps and processes that you were running.**
+
+---
+
+## File structure changes
+##### January 16 2025
+
+- I have changed the structure of how themes are loaded, now instead of having a Theme.sh for each theme, now there is only one located in ~/.config/bspwm/src/ and everything you need to modify is in theme-config.bash, all the configuration is in variables. To load the theme bars, there is now a file called Bar.bash within each theme, that is, to modify or create new themes, what you will have to modify is theme-config.bash and Bar.bash within each theme .
+
+All this to make creating/editing themes less tedious and tiring and not having to edit theme.sh 18 times.
+
+- I put the terminal selector back, with alacritty and kitty. Be sure you add all theme files to the themes directory within kitty's configuration.
+
+- I plan to add ghostty instead kitty but on 2 of my machines, ghostty make my cpus works at 100% load.. i think i will wait few months more.
+
 ## Scratchpads update
 ##### December 16 2024
 

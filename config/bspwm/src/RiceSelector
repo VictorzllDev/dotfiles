@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #  ██████╗ ██╗ ██████╗███████╗
-#  ██╔══██╗██║██╔════╝██╔════╝        gh0stzk
-#  ██████╔╝██║██║     █████╗          https://github.com/gh0stzk/dotfiles
-#  ██╔══██╗██║██║     ██╔══╝          08.12.2023 08:48:08
-#  ██║  ██║██║╚██████╗███████╗
+#  ██╔══██╗██║██╔════╝██╔════╝     gh0stzk
+#  ██████╔╝██║██║     █████╗       https://github.com/gh0stzk/dotfiles
+#  ██╔══██╗██║██║     ██╔══╝       08.12.2023 08:48:08
+#  ██║  ██║██║╚██████╗███████╗     Copyright (C) 2021-2025 gh0stzk <z0mbi3.zk@protonmail.com>
 #  ╚═╝  ╚═╝╚═╝ ╚═════╝╚══════╝
 #
 #            ███████╗███████╗██╗     ███████╗ ██████╗████████╗ ██████╗ ██████╗
@@ -16,10 +16,11 @@
 # Some vars
 bspwm_dir="$HOME/.config/bspwm"
 read -r current_rice < "$bspwm_dir"/.rice
-rofi_command="rofi -dmenu -theme $bspwm_dir/src/rofi-themes/RiceSelector.rasi"
+rofi_command="rofi -dmenu -p RiceSelector -theme $bspwm_dir/src/rofi-themes/RiceSelector.rasi"
 
 # Variables to try to define the correct size of the images for your resolution
-monitor_res=$(($(xdpyinfo | awk '/dimensions/{print $2}' | cut -d 'x' -f1) * 17 / $(xdpyinfo | awk '/resolution/{print $2}' | cut -d 'x' -f1)))
+focused_monitor=$(bspc query -M -m focused --names)
+monitor_res=$(($(xrandr | grep -w "$focused_monitor" | grep -o '[0-9]\+x[0-9]\+' | cut -d 'x' -f 1) * 17 / $(xdpyinfo | awk '/resolution/{print $2}' | cut -d 'x' -f1)))
 rofi_override="element-icon{size:${monitor_res}px;}"
 
 # List rices
@@ -37,5 +38,5 @@ selected=$(
 # If a valid option was selected, write the value to the configuration file and change theme.
 [[ -n "$selected" && "$selected" != "$current_rice" ]] && {
     echo "$selected" > "$bspwm_dir"/.rice
-	"${bspwm_dir}"/rices/"${selected}"/Theme.sh 
+    "${bspwm_dir}"/src/Theme.sh
 }

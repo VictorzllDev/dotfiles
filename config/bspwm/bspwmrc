@@ -8,10 +8,7 @@
 #  ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
 #	Author	-	gh0stzk
 #	Repo	-	https://github.com/gh0stzk/dotfiles
-#	Copyright (C) 2021-2024 gh0stzk <z0mbi3.zk@protonmail.com>
-
-# Current rice
-read -r RICETHEME < "${HOME}"/.config/bspwm/.rice
+#	Copyright (C) 2021-2025 gh0stzk <z0mbi3.zk@protonmail.com>
 
 # Set environment variables
 export PATH="$HOME/.config/bspwm/src:$PATH"
@@ -23,13 +20,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #  ║║║║ ║╠╦╝╠╩╗╚═╗╠═╝╠═╣║  ║╣ ╚═╗
 #  ╚╩╝╚═╝╩╚═╩ ╩╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
 
-# Default 1 monitor with 6 workspaces
-for monitor in $(xrandr -q | grep -w 'connected' | cut -d' ' -f1); do
-    bspc monitor "$monitor" -d '1' '2' '3' '4' '5' '6'
-    #bspc monitor "$monitor" -d '' '' '' '' '' ''
-done
-
-## For two or three monitors configuration see https://github.com/gh0stzk/dotfiles/wiki/Two-or-more-monitors-setup
+MonitorSetup
 
 #  ╔╗ ╔═╗╔═╗╦ ╦╔╦╗  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗
 #  ╠╩╗╚═╗╠═╝║║║║║║  ║  ║ ║║║║╠╣ ║║ ╦
@@ -47,6 +38,7 @@ bspc config removal_adjustment        true
 
 bspc config focus_follows_pointer     true
 bspc config pointer_follows_focus     false
+bspc config pointer_follows_monitor   true
 bspc config pointer_motion_interval   7
 bspc config pointer_modifier          mod4
 bspc config pointer_action1           move
@@ -64,7 +56,7 @@ bspc config pointer_action3           resize_corner
 pidof -q sxhkd || { sxhkd -c "${HOME}"/.config/bspwm/src/config/sxhkdrc & }
 
 # Load current theme
-"${HOME}"/.config/bspwm/rices/"${RICETHEME}"/Theme.sh
+"${HOME}"/.config/bspwm/src/Theme.sh
 
 # Launch picom
 pidof -q picom || { picom --config "${HOME}"/.config/bspwm/src/config/picom.conf & }
@@ -76,7 +68,7 @@ pidof -q xsettings || { xsettingsd --config="${HOME}"/.config/bspwm/src/config/x
 pidof -q eww || { eww -c "${HOME}"/.config/bspwm/eww daemon & }
 
 # Launch clipboard daemon
-pidof -q greenclip || { greenclip daemon & }
+pidof -q clipcatd || { clipcatd & }
 
 # Launch polkit
 pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & }
