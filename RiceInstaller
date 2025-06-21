@@ -457,7 +457,7 @@ install_aur_dependencies() {
 clone_dotfiles() {
     clear
     logo "Downloading dotfiles"
-    repo_url="https://github.com/gh0stzk/dotfiles"
+    repo_url="https://github.com/VictorzllDev/dotfiles"
     repo_dir="$HOME/dotfiles"
     timestamp=$(date +"%Y%m%d-%H%M%S")
     sleep 3
@@ -472,7 +472,7 @@ clone_dotfiles() {
 
     # Clone new repository
     printf "%b\n" "${BLD}${CYE}Cloning dotfiles from: ${CBL}${repo_url}${CNC}"
-    if git clone --depth=1 "$repo_url" "$repo_dir" >> "$ERROR_LOG" 2>&1; then
+    if git clone --depth=1 -b MyCorona "$repo_url" "$repo_dir" >> "$ERROR_LOG" 2>&1; then
         printf "%b\n\n" "${BLD}${CGR}Dotfiles cloned successfully!${CNC}"
     else
         log_error "Repository clone failed"
