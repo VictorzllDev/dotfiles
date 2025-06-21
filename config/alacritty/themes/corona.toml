@@ -1,0 +1,33 @@
+# Colors for Corona Rice
+
+# Default colors
+[colors.primary]
+background = "#121212"   # Fundo preto profundo (como o Death Note)
+foreground = "#e0e0e0"   # Texto branco suave (alta legibilidade)
+
+# Cursor colors
+[colors.cursor]
+cursor = "#ffffff"       # Cursor branco puro (destaque máximo)
+text = "#121212"         # Texto do cursor preto (contraste)
+
+# Normal colors (tons sóbrios e discretos)
+[colors.normal]
+black = "#212121"        # Preto-cinza (para elementos secundários)
+red = "#ef5350"          # Vermelho (sangue, como os assassinatos de Kira)
+green = "#66bb6a"        # Verde suave (para contraste discreto)
+yellow = "#ffca28"       # Amarelo (destaque, como os olhos dos Shinigami)
+blue = "#42a5f5"         # Azul claro (para links ou elementos secundários)
+magenta = "#ab47bc"      # Roxo (pode representar o Death Note)
+cyan = "#26c6da"         # Ciano (para pequenos destaques)
+white = "#f5f5f5"        # Branco puro (texto principal)
+
+# Bright colors (versões mais claras para destaques)
+[colors.bright]
+black = "#424242"        # Cinza médio
+red = "#ff867c"          # Vermelho claro (destaque)
+green = "#98ee99"        # Verde claro
+yellow = "#fff176"       # Amarelo brilhante
+blue = "#80d6ff"         # Azul claro (destaque)
+magenta = "#ce93d8"      # Lilás (para elementos mágicos)
+cyan = "#80deea"         # Ciano brilhante
+white = "#ffffff"        # Branco total (máximo contraste)
