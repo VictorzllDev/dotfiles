@@ -176,13 +176,13 @@ super + ctrl + {Left,Right}
 	bspc node -d {prev,next} '--follow'
 
 # Node switcher
-alt + Tab
-    rofi \
-        -theme $HOME/.config/bspwm/src/rofi-themes/Windows.rasi \
-        -show window -window-thumbnail \
-        -window-hide-active-window true \
-        -kb-accept-entry "!Alt-Tab,Return" \
-        -kb-element-next "Alt-Tab"
+# alt + Tab
+#     rofi \
+#         -theme $HOME/.config/bspwm/src/rofi-themes/Windows.rasi \
+#         -show window -window-thumbnail \
+#         -window-hide-active-window true \
+#         -kb-accept-entry "!Alt-Tab,Return" \
+#         -kb-element-next "Alt-Tab"
 
 # Focus the node in the given direction
 super + alt + {Left,Down,Up,Right}
