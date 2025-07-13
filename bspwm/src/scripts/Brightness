@@ -18,7 +18,7 @@
 # Licensed under GPL-3.0 license
 # =============================================================
 
-DIR="$HOME/.config/bspwm/assets"
+DIR="$HOME/.config/bspwm/src/assets"
 BRIGHTNESS_STEPS=5
 MIN_BRIGHTNESS=2
 
