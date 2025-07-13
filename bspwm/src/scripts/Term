@@ -1,0 +1,26 @@
+#!/bin/sh
+# =============================================================
+# Author: gh0stzk
+# Repo: https://github.com/gh0stzk/dotfiles
+# Date: 2024-02-22
+#
+# Script Name: Term Launcher
+# Description: Dynamic terminal selector/launcher with multi-mode support
+# Features:
+#   - Rofi-based terminal selection (Alacritty/Termite)
+#
+# Copyright (C) 2021-2025 gh0stzk <z0mbi3.zk@protonmail.com>
+# Licensed under GPL-3.0 license
+# =============================================================
+
+# Launch the terminal with appropriate options
+case $1 in
+	"--terminal") kitty ;;
+	"--floating") kitty --class=FloaTerm ;;
+	"--update") kitty --hold --class=FloaTerm -e paru -Syu --nocombinedupgrade ;;
+	"--checkupdates") kitty --hold --class=Updating -e Updates --print-updates ;;
+	"--yazi") kitty --hold --name=YaziTerm --class=FloaTerm -e yazi ;;
+	"--nvim") kitty -e nvim ;;
+	"--fetch") kitty --name=FetchTerm --class=FloaTerm -e ~/.local/bin/sysfetch ;;
+	*) echo "Usage: $0 {--terminal|--floating|--update|--checkupdates|--yazi|--nvim|--fetch}" ;;
+esac
