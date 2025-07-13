@@ -51,10 +51,8 @@ default_lockscreen () {
 
 rice_lockscreen () {
 
-    # Current Rice
-    read -r RICE < "$HOME"/.config/bspwm/.rice
     # Wallpapers dir
-    image_dir="$HOME/.config/bspwm/rices/${RICE}/walls"
+    image_dir="$HOME/.config/bspwm/src/walls"
 
     # Select random image
     lock_image=$(find "$image_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | shuf -n 1)
