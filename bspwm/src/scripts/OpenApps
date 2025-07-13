@@ -61,9 +61,6 @@ case "$1" in
 		pavucontrol
 		;;
 		# Eww Widgets
-	--usercard)
-		eww -c "$WIDGET_DIR" open --toggle launchermenu
-		;;
 	--calendar)
 		eww -c "$WIDGET_DIR" open --toggle date
 		;;
