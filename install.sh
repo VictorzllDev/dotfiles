@@ -218,6 +218,9 @@ add_chaotic_repo() {
         return 1
     fi
 
+    printf "%b\n" "${BLD}${CYE}Updating pacman database...${CNC}"
+    sudo pacman -Sy
+
     printf "%b\n" "\n${BLD}${CBL}${repo_name} ${CGR}Repository configured successfully!${CNC}"
     sleep 3
 }
