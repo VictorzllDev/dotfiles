@@ -233,7 +233,7 @@ install_dependencies() {
     update_mirrorlist
 
     # List of dependencies
-    dependencies=("base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "geany" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "picom" "polybar" "lxsession-gtk3" "python-gobject" "redshift" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "webp-pixbuf-loader")
+    dependencies=("base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "redshift" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "webp-pixbuf-loader")
 
     clear
     print_logo "Installing needed packages from official repositories..."
@@ -279,7 +279,7 @@ install_chaotic_dependencies() {
     sleep 2
 
     # List of dependencies
-    chaotic_dependencies=("paru" "eww-git" "i3lock-color" "simple-mtpfs" "fzf-tab-git")
+    chaotic_dependencies=("paru" "eww-git" "i3lock-color" "fzf-tab-git")
 
     printf "%b\n\n" "${BLD}${CBL}Checking for required packages...${CNC}"
     sleep 2
@@ -322,7 +322,7 @@ install_aur_dependencies() {
     sleep 2
 
     # AUR Package List
-    aur_apps=("xqp" "xwinwrap-0.9-bin")
+    aur_apps=("xqp" "xwinwrap-0.9-bin" "qogir-gtk-theme")
 
     # Display status
     printf "%b\n\n" "${BLD}${CBL}Checking for required AUR packages...${CNC}"

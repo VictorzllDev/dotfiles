@@ -183,12 +183,6 @@ apply_gtk_appearance() {
 	xsetroot -cursor_name left_ptr
 }
 
-# Apply Geany Theme
-apply_geany_theme(){
-	sed -i "$HOME"/.config/geany/geany.conf \
-		-e "s/color_scheme=.*/color_scheme=$geany_theme.conf/g"
-}
-
 # Apply wallpaper engine
 apply_wallpaper () {
 	case $ENGINE in
@@ -232,6 +226,5 @@ apply_gtk_appearance
 apply_dunst_config
 apply_eww_colors
 apply_menu_colors
-apply_geany_theme
 apply_wallpaper
 apply_bar

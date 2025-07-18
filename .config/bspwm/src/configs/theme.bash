@@ -58,7 +58,7 @@ dunst_corner_radius='6'
 dunst_font='JetBrainsMono NF Medium 9'
 dunst_border='0'
 dunst_frame_color="$accent_color"
-dunst_icon_theme="TokyoNight-SE"
+dunst_icon_theme="Papirus-Dark"
 # Dunst animations
 dunst_close_preset="fly-out"
 dunst_close_direction="up"
@@ -84,10 +84,9 @@ sl_date="${fg}"
 sl_verify="${green}"
 
 # Gtk theme
-gtk_theme="TokyoNight-zk"
-gtk_icons="TokyoNight-SE"
-gtk_cursor="Qogirr-Dark"
-geany_theme="z0mbi3-TokyoNight"
+gtk_theme="Qogir-Dark"
+gtk_icons="Papirus-Dark"
+gtk_cursor="Qogir-Dark"
 
 # Wallpaper engine
 # Available engines:
@@ -99,4 +98,4 @@ geany_theme="z0mbi3-TokyoNight"
 ENGINE="Theme"
 CUSTOM_DIR="/path/to/dir"
 CUSTOM_WALL="/path/to/image"
-CUSTOM_ANIMATED="$HOME/.config/bspwm/src/assets/animated_wall.mp4"
+# CUSTOM_ANIMATED="$HOME/.config/bspwm/src/walls/animated/wall-01.mp4"
