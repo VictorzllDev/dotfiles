@@ -325,7 +325,7 @@ install_aur_dependencies() {
     sleep 2
 
     # AUR Package List
-    aur_apps=("xqp" "xwinwrap-0.9-bin" "qogir-gtk-theme")
+    aur_apps=("xqp" "xwinwrap-0.9-bin" "qogir-gtk-theme" "qogir-icon-theme")
 
     # Display status
     printf "%b\n\n" "${BLD}${CBL}Checking for required AUR packages...${CNC}"
