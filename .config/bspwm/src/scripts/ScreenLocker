@@ -27,8 +27,12 @@ date=#c0caf5
 verify=#9ece6a
 
 default_lockscreen () {
+
     maim -d 0.3 -u ${TEMP_IMAGE}
     magick $TEMP_IMAGE -blur 5x4 $TEMP_IMAGE
+
+
+    magick  ${TEMP_IMAGE} $HOME/.config/bspwm/src/assets/overlay.png -gravity southeast -composite $TEMP_IMAGE
 
     i3lock -n --force-clock -i $TEMP_IMAGE -e --indicator \
         --radius=30 --ring-width=60 --inside-color=$bg \
@@ -50,7 +54,7 @@ default_lockscreen () {
 }
 
 rice_lockscreen () {
-    # Wallpapers dir
+  # Wallpapers dir
     image_dir="$HOME/.config/bspwm/src/walls"
 
     # Select random image
@@ -58,9 +62,9 @@ rice_lockscreen () {
 
     # If the image is *.webp or any other supported format, convert to /tmp/lock_image.jpg
     case "$lock_image" in
-      *.webp|*.jpg|*.jpeg|*.png)
-        magick "$lock_image" -resize 1366x768^ "$TEMP_IMAGE" || exit 1
-      ;;
+        *.webp|*.jpg|*.jpeg|*.png)
+            magick "$lock_image" -resize 1366x768^ "$TEMP_IMAGE" || exit 1
+        ;;
     esac
 
     # Run i3lock with adjusted image
@@ -86,7 +90,7 @@ case $1 in
     -r|--rice)
         rice_lockscreen ;;
     -h|--help)
-        echo -e "ScreenLocker [options]
+		echo -e "ScreenLocker [options]
 Note: If an option is not specified, the screen locks with a screenshot with a blur effect.
 
 Options:
