@@ -236,7 +236,7 @@ install_dependencies() {
     update_mirrorlist
 
     # List of dependencies
-    dependencies=("base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "redshift" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "webp-pixbuf-loader")
+    dependencies=("base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "redshift" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "ttf-sourcecodepro-nerd" "webp-pixbuf-loader")
 
     clear
     print_logo "Installing needed packages from official repositories..."
