@@ -9,11 +9,12 @@
 #  └┐┌┘├─┤├┬┘└─┐
 #   └┘ ┴ ┴┴└─└─┘
 export VISUAL="${EDITOR}"
-export EDITOR='zed'
+export EDITOR='nvim'
 export BROWSER='firefox'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export SUDO_PROMPT="Deploying root access for %u. Password pls: "
 export BAT_THEME="base16"
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
@@ -162,3 +163,7 @@ alias ll='eza --icons=always --color=always -la'
 
 source /usr/share/nvm/init-nvm.sh
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+eval "$(starship init zsh)"
+
+colorscript -e pipes

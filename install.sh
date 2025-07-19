@@ -236,7 +236,7 @@ install_dependencies() {
     update_mirrorlist
 
     # List of dependencies
-    dependencies=("base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "nvm" "go" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "ttf-sourcecodepro-nerd" "webp-pixbuf-loader")
+    dependencies=("starship" "base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "nvm" "go" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "ttf-sourcecodepro-nerd" "webp-pixbuf-loader")
 
     clear
     print_logo "Installing needed packages from official repositories..."
@@ -407,7 +407,7 @@ backup_existing_config() {
         fi
     }
 
-    config_folders="bspwm clipcat picom rofi eww sxhkd dunst kitty polybar gtk-3.0 yazi tmux zsh paru"
+    config_folders="bspwm clipcat gtk-3.0 kitty paru picom polybar starship tmux yazi zsh rofi eww sxhkd dunst"
 
     for folder in $config_folders; do
         backup_item d "$HOME/.config/$folder" "$folder"
