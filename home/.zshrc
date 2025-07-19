@@ -159,3 +159,6 @@ alias ll='eza --icons=always --color=always -la'
 #  ├─┤│ │ │ │ │  └─┐ │ ├─┤├┬┘ │
 #  ┴ ┴└─┘ ┴ └─┘  └─┘ ┴ ┴ ┴┴└─ ┴
 #disable-fzf-tab
+
+source /usr/share/nvm/init-nvm.sh
+export PATH="$PATH:$(go env GOPATH)/bin"
