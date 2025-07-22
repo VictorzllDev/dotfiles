@@ -36,6 +36,7 @@ print_logo() {
   spaces=$(( (banner_width - text_length - 4) / 2 ))
   padding=$(printf "%-${spaces}s" " ")
 
+  printf "\n"
   printf "%b\n" "${BLD}${CGR}   ██████╗ ██████╗ ██████╗  ██████╗ ███╗   ██╗██╗██╗  ██╗${CNC}"
   printf "%b\n" "${BLD}${CGR}  ██╔════╝██╔═══██╗██╔══██╗██╔═══██╗████╗  ██║██║╚██╗██╔╝${CNC}"
   printf "%b\n" "${BLD}${CGR}  ██║     ██║   ██║██████╔╝██║   ██║██╔██╗ ██║██║ ╚███╔╝ ${CNC}"
@@ -76,32 +77,6 @@ is_installed() {
     pacman -Qq "$1" >/dev/null 2>&1
 }
 
-is_reflector() {
-    # Check if reflector is installed
-    if ! command -v reflector >/dev/null 2>&1; then
-        # Reflector is not installed, try to install it
-        printf "\t%b\n" "${BLD}${CBL}Installing reflector to get the best mirrors...${CNC}"
-        
-        # Update the package database first
-        if ! sudo pacman -Syy 2>&1 | tee -a "$ERROR_LOG" >/dev/null; then
-            log_error "Failed to update package database."
-            exit 1
-        fi
-        
-        # Install reflector
-        if ! sudo pacman -S reflector --noconfirm 2>&1 | tee -a "$ERROR_LOG" >/dev/null; then
-            log_error "Failed to install reflector."
-            exit 1
-        fi
-    fi
-}
-
-update_mirrorlist() {
-  printf "%b\n\n" "${BLD}${CGR}Getting the 5 best and fastest mirrors${CNC}"
-  sudo reflector --verbose --age 12 --fastest 10 --score 10 --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
-  sudo pacman -Syy
-}
-
 # Function to verify if packages were installed correctly
 verify_installation() {
     failed_pkgs=()
@@ -123,8 +98,7 @@ verify_installation() {
 }
 
 
-
-
+# Initial Welcome
 welcome() {
     clear
     print_logo "Welcome $USER"
@@ -231,12 +205,8 @@ install_dependencies() {
     print_logo "Installing needed packages from official repositories..."
     sleep 2
 
-    # Ensure reflector is installed and update mirrorlist
-    is_reflector
-    update_mirrorlist
-
     # List of dependencies
-    dependencies=("starship" "base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "nvm" "go" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "ttf-sourcecodepro-nerd" "webp-pixbuf-loader")
+    dependencies=("starship" "base-devel" "bluez" "bluez-utils" "bat" "brightnessctl" "bspwm" "clipcat" "dunst" "eza" "feh" "fzf" "thunar" "tumbler" "firefox" "git" "less" "ripgrep" "imagemagick" "jq" "kitty" "libwebp" "maim" "neovim" "unzip" "pavucontrol" "pamixer" "pacman-contrib" "papirus-icon-theme" "gtk-engine-murrine" "gtk-engines" "picom" "polybar" "lxsession-gtk3" "python-gobject" "nvm" "go" "rofi" "rustup" "sxhkd" "tmux" "xclip" "xdg-user-dirs" "xdo" "xdotool" "xsettingsd" "xorg-xdpyinfo" "xorg-xkill" "xorg-xprop" "xorg-xrandr" "xorg-xsetroot" "xorg-xwininfo" "yazi" "zsh" "zsh-autosuggestions" "zsh-history-substring-search" "zsh-syntax-highlighting" "ttf-inconsolata" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "ttf-terminus-nerd" "ttf-ubuntu-mono-nerd" "ttf-sourcecodepro-nerd" "webp-pixbuf-loader")
 
     clear
     print_logo "Installing needed packages from official repositories..."
