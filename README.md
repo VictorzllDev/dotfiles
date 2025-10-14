@@ -1,38 +1,33 @@
-- base-devel
-- brightnessctl
-- bspwm
-- git
-- libwebp
-- maim
-- vim
-- neovim
-- unzip
-- pavucontrol
-- pamixer
-- pacman-contrib
-- nodejs-lts
-- go
-- rustup
-- sxhkd
-- tmux
-- xclip
-- xorg-xdpyinfo
-- xorg-xkill
-- xorg-xprop
-- xorg-xrandr
-- xorg-xsetroot
-- xorg-xwinfo
-- yazi
-- kitty
-- firefox
-- feh (wallpaper)
-- eza
-- bat
-- less
-- ripgrep
-- starship
-- extra/ttf-jetbrains-mono
-- extra/ttf-jetbrains-mono-nerd
-- extra/noto-fonts-emoji
-- extra/noto-fonts
-- extra/inter-font
+# Coronix ⨳ Dotfiles
+
+![Screenshot](./docs/preview.png)
+
+╭─ Um setup minimalista, rápido e leve para Arch Linux  
+╰─ Perfeito para máquinas fracas, terminais limpos e mentes focadas
+
+---
+
+## ❯ O que você vai encontrar?
+
+╭─ `bspwm` → gerenciador de janelas leve  
+├─ `sxhkd` → atalhos de teclado simples  
+├─ `kitty` → terminal moderno e veloz  
+├─ `neovim` + `tmux` → edição e multitarefa  
+├─ `starship` → prompt bonito e informativo  
+╰─ utilitários de terminal → `bat`, `eza`, `ripgrep`, `yazi` e mais
+
+Nada de excessos. Só o necessário.
+
+---
+
+## ❯ Instalação rápida
+
+⚠️ Recomendado instalar o **Arch Linux** com o perfil `bspwm` usando `archinstall`
+
+```bash
+git clone https://github.com/VictorzllDev/dotfiles.git
+cp dotfiles/install.sh .
+./install.sh
+```
+
+<p align="center"><i>By VictorzllDev ☕</i></p>
