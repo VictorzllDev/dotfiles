@@ -4,9 +4,8 @@
 #  ██╔══██╗██╔══██║╚════██║██╔══██║██╔══██╗██║     
 #  ██████╔╝██║  ██║███████║██║  ██║██║  ██║╚██████╗
 #  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝
-#
-#	Author - Corona
-#	Repo   - https://github.com/gh0stzk/dotfiles
+#  Author - VictorzllDev
+#  Repo   - https://github.com/VictorzllDev/dotfiles
 
 
 # If not running interactively, don't do anything

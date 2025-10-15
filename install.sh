@@ -6,11 +6,10 @@
 #  ██║     ██║   ██║██╔══██╗██║   ██║██║╚██╗██║██║ ██╔██╗ 
 #  ╚██████╗╚██████╔╝██║  ██║╚██████╔╝██║ ╚████║██║██╔╝ ██╗
 #   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝
+#  Author - VictorzllDev
+#  Repo   - https://github.com/VictorzllDev/dotfiles
 #
-#	Author - Corona
-#	Repo   - https://github.com/gh0stzk/dotfiles
-#
-#	install.sh - Script to install my dotfiles
+#  install.sh - Script to install my dotfiles
 
 # Colors
 CRE=$(tput setaf 1)    # Red
