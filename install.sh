@@ -134,7 +134,7 @@ install_dependencies() {
     sleep 2
 
     # List of dependencies
-    dependencies=("reflector" "base-devel" "brightnessctl" "bspwm" "git" "libwebp" "maim" "vim" "neovim" "unzip" "pavucontrol" "pamixer" "pacman-contrib" "nodejs-lts" "go" "rustup" "sxhkd" "tmux" "xclip" "yazi" "kitty" "firefox" "feh" "eza" "bat" "less" "ripgrep" "starship" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "noto-fonts-emoji" "noto-fonts" "inter-font")
+    dependencies=("earlyoom" "reflector" "base-devel" "brightnessctl" "bspwm" "git" "libwebp" "maim" "vim" "neovim" "unzip" "pavucontrol" "pamixer" "pacman-contrib" "nodejs-lts" "npm" "go" "rustup" "sxhkd" "tmux" "xclip" "yazi" "kitty" "firefox" "feh" "eza" "bat" "less" "ripgrep" "starship" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "noto-fonts-emoji" "noto-fonts" "inter-font")
 
     clear
     print_logo "Installing needed packages from official repositories..."
@@ -285,6 +285,23 @@ install_dotfiles() {
     sleep 3
 } 
 
+configure_services() {
+    clear
+    print_logo "Configuring Services"
+    sleep 2
+
+    # Enable EarlyOOM Service
+    printf "%b\n" "${BLD}${CYE}Enabling user EarlyOOM service...${CNC}"
+    if systemctl enable --now earlyoom >> "$ERROR_LOG" 2>&1; then
+        printf "%b\n\n" "${BLD}${CGR}User EarlyOOM service activated successfully${CNC}"
+    else
+        log_error "Failed to enable user EarlyOOM service"
+        printf "%b\n\n" "${BLD}${CRE}Failed to activate user EarlyOOM service${CNC}"
+    fi
+
+    sleep 3
+}
+
 final_prompt() {
     clear
     print_logo "Installation Complete"
@@ -308,6 +325,7 @@ final_prompt() {
 }
 
 
+
 initial_checks
 welcome
 
@@ -315,5 +333,7 @@ install_dependencies
 
 backup_existing_config
 install_dotfiles
+
+configure_services
 
 final_prompt
