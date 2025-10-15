@@ -2,32 +2,42 @@
 
 ![Screenshot](./docs/preview.png)
 
-╭─ Um setup minimalista, rápido e leve para Arch Linux  
-╰─ Perfeito para máquinas fracas, terminais limpos e mentes focadas
+A minimalist, fast, and lightweight setup for Arch Linux.
 
 ---
 
-## ❯ O que você vai encontrar?
+## 🚀 What's Inside?
 
-╭─ `bspwm` → gerenciador de janelas leve  
-├─ `sxhkd` → atalhos de teclado simples  
-├─ `kitty` → terminal moderno e veloz  
-├─ `neovim` + `tmux` → edição e multitarefa  
-├─ `starship` → prompt bonito e informativo  
-╰─ utilitários de terminal → `bat`, `eza`, `ripgrep`, `yazi` e mais
+A clean and efficient environment designed for performance, simplicity, and focus:
 
-Nada de excessos. Só o necessário.
+* **`bspwm`** → Lightweight window manager
+* **`sxhkd`** → Simple and customizable keybindings
+* **`kitty`** → Fast and modern terminal
+* **`neovim`** + **`tmux`** → Powerful text editing and multitasking
+* **`starship`** → Beautiful and informative prompt
+* **Terminal utilities** → `bat`, `eza`, `ripgrep`, `yazi`, and more
+
+No bloat. Just the essentials.
 
 ---
 
-## ❯ Instalação rápida
+## ⚡ Quick Installation
 
-⚠️ Recomendado instalar o **Arch Linux** com o perfil `bspwm` usando `archinstall`
+For an optimized experience, it's recommended to install **Arch Linux** using the `bspwm` profile with `archinstall`.
+
+### 1. Clone the repository:
 
 ```bash
 git clone https://github.com/VictorzllDev/dotfiles.git
-cp dotfiles/install.sh .
+```
+
+### 2. Run the installation script:
+
+```bash
+cp dotfiles/install.sh
 ./install.sh
 ```
+
+---
 
 <p align="center"><i>By VictorzllDev ☕</i></p>
