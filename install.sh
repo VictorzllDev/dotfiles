@@ -134,7 +134,7 @@ install_dependencies() {
     sleep 2
 
     # List of dependencies
-    dependencies=("earlyoom" "reflector" "base-devel" "brightnessctl" "bspwm" "git" "libwebp" "maim" "vim" "neovim" "unzip" "pavucontrol" "pamixer" "pacman-contrib" "nodejs-lts" "npm" "go" "rustup" "sxhkd" "tmux" "xclip" "yazi" "kitty" "firefox" "feh" "eza" "bat" "less" "ripgrep" "starship" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "noto-fonts-emoji" "noto-fonts" "inter-font")
+    dependencies=("glow" "earlyoom" "reflector" "base-devel" "brightnessctl" "bspwm" "git" "libwebp" "maim" "vim" "neovim" "unzip" "pavucontrol" "pamixer" "pacman-contrib" "nodejs-lts" "npm" "go" "rustup" "sxhkd" "tmux" "xclip" "yazi" "kitty" "firefox" "feh" "eza" "bat" "less" "ripgrep" "starship" "ttf-jetbrains-mono" "ttf-jetbrains-mono-nerd" "noto-fonts-emoji" "noto-fonts" "inter-font")
 
     clear
     print_logo "Installing needed packages from official repositories..."
