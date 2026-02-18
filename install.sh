@@ -211,7 +211,7 @@ backup_existing_config() {
         fi
     }
 
-    config_folders="bspwm kitty sxhkd tmux yazi"
+    config_folders="bspwm gtk-3.0 gtk-4.0 kitty polybar sxhkd tmux yazi"
 
     for folder in $config_folders; do
         backup_item d "$HOME/.config/$folder" "$folder"

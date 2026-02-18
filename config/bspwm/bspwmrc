@@ -36,6 +36,8 @@ bspc config pointer_action3           resize_corner
 
 feh --bg-scale "$HOME/.config/bspwm/walls/handOfAdam.jpg" &
 
+~/.config/polybar/launch.sh &
+
 xset s off
 xset -dpms
 xset s noblank
