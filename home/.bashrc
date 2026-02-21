@@ -39,6 +39,7 @@ alias grep='grep --color=auto'
 alias cat="bat --theme=base16"
 alias ls='eza --icons=always --color=always -a'
 alias ll='eza --icons=always --color=always -la'
+alias lt='eza --icons=always --color=always -T'
 
 eval "$(starship init bash)"
 
